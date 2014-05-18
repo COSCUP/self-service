@@ -13,6 +13,7 @@ if (!endswith($_FILES['file']['name'], '.png')) {
     $_FILES['file']['name'] = $_FILES['file']['name'] . '.png';
 }
 
+mkdir(dirname(UPLOADED_PATH), 0777, true);
 move_uploaded_file($_FILES['file']['tmp_name'], UPLOADED_PATH.$_FILES['file']['name']);
 
 ?>
