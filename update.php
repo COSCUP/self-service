@@ -1,7 +1,7 @@
 <?php
 include_once('config.php');
 
-header('Content-Type: text/plain');
+header('Content-Type: text/plain; charset=UTF-8');
 setlocale(LC_ALL, 'en_US.UTF-8');
 
 if (!isset($argv) && $_SERVER['REQUEST_METHOD'] !== 'POST') {
