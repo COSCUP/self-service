@@ -12,7 +12,7 @@
     }
     .container {
       margin: 100px auto;
-      width: 700px;
+      width: 950px;
     }
 
     input {
@@ -24,17 +24,17 @@
         background: white;
     }
 
-    #shiny_red_button {
+    .shiny_button {
         float: left;
         width: 300px;
         height: 300px;
+        margin: 10px;
 
         border-radius: 150px;
         -moz-border-radius: 150px;
         -webkit-border-radius: 150px;
         -o-border-radius: 150px;
 
-        background: #c9171e;
         border: 3px solid rgba(255,255,255,0.2);
         color: #fff;
         font-size: 64px;
@@ -45,8 +45,19 @@
         -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
         -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     }
+
+    #shiny_red_button {
+        background: #c9171e;
+    }
     #shiny_red_button:hover {
         background: red;
+    }
+
+    #shiny_yellow_button {
+        background: #eeee00;
+    }
+    #shiny_yellow_button:hover {
+        background: yellow;
     }
 
     #file_upload {
@@ -108,7 +119,11 @@
   <body>
     <div class="container">
       <form method="post" accept-charset="utf-8" action="update.php">
-        <input id="shiny_red_button" type="submit" value="更新網站" />
+        <input id="shiny_red_button" class="shiny_button" type="submit" value="更新網站" />
+      </form>
+
+      <form method="post" accept-charset="utf-8" action="program.php">
+        <input id="shiny_yellow_button" class="shiny_button" type="submit" value="預覽議程" />
       </form>
 
       <form action="#" method="get">
